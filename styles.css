@@ -1,0 +1,33 @@
+/* For index.html (Home Page) */
+
+.wrapper{
+    background-color: red;
+    display: grid; 
+    grid-template-columns: 0fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 0fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". title new-log-wrapper"
+        ". log-wrapper new-log-wrapper"
+        ". . ."; 
+}
+
+.log-wrapper{
+    grid-area: log-wrapper;
+}
+
+.new-log-wrapper{
+    background-color: green;
+    grid-area: new-log-wrapper;
+    text-align: center;
+    justify-items: center;
+}
+
+.title{
+    background-color: blue;
+    grid-area: title;
+}
+
+button{
+    margin: auto;
+}
