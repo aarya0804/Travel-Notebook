@@ -4,17 +4,59 @@
     background-color: #E7ECEF;
 }
 
-.wrapper {
-  background-color: red;
-  display: grid;
-  grid-template-columns: 0fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". title new-log-wrapper"
-    ". log-wrapper new-log-wrapper"
-    ". . .";
+
+.wrapper{
+    display: grid; 
+    grid-template-columns: 0fr 1fr 1fr; 
+    grid-template-rows: 0fr 1fr 0fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". title new-log-wrapper"
+        ". log-wrapper new-log-wrapper"
+        ". . ."; 
+    border:#274C77;
+    border-width: 5px;
+    border-style: solid;
+    width: 80%;
+    height: 30em;
+    margin: auto;
+    margin-top: 15vh;
+    min-width: 500px;
 }
+
+.log-wrapper{
+    grid-area: log-wrapper;
+    border-top:#274C77;
+    border-top-style: solid;
+    border-width: .2em;
+    padding: 5px;
+}
+
+.new-log-wrapper{
+    grid-area: new-log-wrapper;
+    text-align: center;
+    justify-items: center;
+    border-left:#274C77;
+    border-left-style: solid;
+    border-width: .4em;
+}
+
+.title{
+    grid-area: title;
+    padding-left: 1em;
+}
+
+.create-new{
+    position: relative;
+    top: 40%;
+    background-color: #274C77;
+    color: #E7ECEF;
+    font-size: 3em;
+    width: 1.2em;
+    text-align: center;
+    border-radius: 1em;
+}
+
 
 .log-title{
   background-color: transparent;
@@ -22,42 +64,51 @@
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 5px;
   color: rgb(15, 30, 82);
 }
 
+.log-date{
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  background-color: transparent;
+}
+
 .log-display-img{
-  width: 0px;
+  width: 100%;
+  min-width: 200px;
 }
 
 .log-wrapper {
   grid-area: log-wrapper;
   overflow: scroll;
+  
 }
 
 .open-log{
   float: right;
-  width: 7rem;
+  border-radius: 100%;
+  width: 2rem;
   height: 2rem;
-  margin: 2em;
+  position: absolute;
+  top: 1%;
+  RIGHT: 1%;
+  transform: translate(-50%, -50%);
   margin-top: 5.5em;
   border-color: transparent;
   background-color:#274C77;
   color:white;
-
 }
 
-.new-log-wrapper {
-
-  grid-area: new-log-wrapper;
-  text-align: center;
-  justify-items: center;
+.open-log:hover{
+  background-color: rgb(87, 20, 15);
+  transition: .3s;
 }
-
-.title {
-
-  grid-area: title;
-}
-
 button {
   margin: auto;
 }
@@ -69,6 +120,7 @@ button {
   height: 150px;
   display: flow-root;
   margin-top: 1em;
+  position: relative;
 }
 
 /* page 2: (New Log Page) */
@@ -201,54 +253,4 @@ button {
   cursor: pointer;
   margin-top: 20px;
   color: #000;
-}
-.wrapper{
-    display: grid; 
-    grid-template-columns: 0fr 1fr 1fr; 
-    grid-template-rows: 0fr 1fr 0fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-        ". title new-log-wrapper"
-        ". log-wrapper new-log-wrapper"
-        ". . ."; 
-    border:#274C77;
-    border-width: 5px;
-    border-style: solid;
-    width: 80%;
-    height: 30em;
-    margin: auto;
-    margin-top: 15vh;
-}
-
-.log-wrapper{
-    grid-area: log-wrapper;
-    border-top:#274C77;
-    border-top-style: solid;
-    border-width: .2em;
-    padding: 5px;
-}
-
-.new-log-wrapper{
-    grid-area: new-log-wrapper;
-    text-align: center;
-    justify-items: center;
-    border-left:#274C77;
-    border-left-style: solid;
-    border-width: .4em;
-}
-
-.title{
-    grid-area: title;
-    padding-left: 1em;
-}
-
-.create-new{
-    position: relative;
-    top: 40%;
-    background-color: #274C77;
-    color: #E7ECEF;
-    font-size: 3em;
-    width: 1.2em;
-    text-align: center;
-    border-radius: 1em;
 }

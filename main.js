@@ -8,6 +8,7 @@ const openPage2 = () =>
 }
 document.querySelector(".create-new").addEventListener("click", openPage2);
 
+
 const openPage3 = () =>
 {
     console.log("BUTTON");
@@ -15,6 +16,7 @@ const openPage3 = () =>
 }
 document.querySelector(".open-log").addEventListener("click", openPage3);
 
+document.querySelector(".edit-page-btn").addEventListener("click", openPage2);
 
 // testing map usage, trying to figure how to make a map appear with APIs
 const editBtn = document.querySelector("#editPageBtn");
