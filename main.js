@@ -1,37 +1,20 @@
 // We can worry about the JS towards the end
 
 // testing map usage, trying to figure how to make a map appear with APIs
-const editBtn = document.querySelector("#editPageBtn");
+// i searched this entire part up, especially the location coordinates part
 const saveBtn = document.querySelector("#saveEntryBtn");
 
-const fields = [
-  document.querySelector("#titleInput"),
-  document.querySelector("#locationInput"),
-  document.querySelector("#datesInput"),
-  document.querySelector("#notesInput"),
-  document.querySelector("#itineraryInput"),
-];
+saveBtn.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
 
+// Photo upload functionality
 const photoInput = document.querySelector("#photoInput");
-const addPhotosBtn = document.querySelector("#addMorePhotosBtn");
+const addPhotosBtn = document.querySelector("#addPhotosBtn");
 const photoDisplay = document.querySelector("#photoDisplay");
 
-editBtn.addEventListener("click", () => {
-  fields.forEach((f) => (f.disabled = false));
-  addPhotosBtn.classList.remove("disabled");
-  saveBtn.style.display = "block";
-});
-
-saveBtn.addEventListener("click", () => {
-  fields.forEach((f) => (f.disabled = true));
-  addPhotosBtn.classList.add("disabled");
-  saveBtn.style.display = "none";
-});
-
 addPhotosBtn.addEventListener("click", () => {
-  if (!addPhotosBtn.classList.contains("disabled")) {
-    photoInput.click();
-  }
+  photoInput.click();
 });
 
 photoInput.addEventListener("change", (e) => {
@@ -45,6 +28,7 @@ photoInput.addEventListener("change", (e) => {
   });
 });
 
+// Location lookup
 const getLocBtn = document.querySelector("#getLocationBtn");
 const locStatus = document.querySelector("#locationStatus");
 const locDisplay = document.querySelector("#locationDisplay");
@@ -70,10 +54,3 @@ getLocBtn.addEventListener("click", () => {
     }
   );
 });
-
-const openPage2 = () =>
-{
-    console.log("BUTTON");
-    window.location.href= "./page2.html";
-}
-document.querySelector(".create-new").addEventListener("click", openPage2);
