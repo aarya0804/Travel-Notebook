@@ -77,7 +77,7 @@ export class LogDisplay extends LitElement {
             <p class="log-title">${this.title}</p>
             <p class="log-date">${this.date}</p>
             <img class="log-display-img" src="main-photo.jpg" alt="Main trip photo" />
-            <button class="open-log">></button>
+            <button class="open-log" onclick="window.location='./page3.html';">></button>
         </div>
     </div>
     `;
