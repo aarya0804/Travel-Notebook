@@ -1,40 +1,40 @@
 // We can worry about the JS towards the end
 const compiledData = [];
 
-const addingData = () =>
+export const addingData = () =>
 {
     const inputs = document.querySelectorAll(".data-input");
-    const title = document.querySelector(".title-input");
-    const newListInput = [];
-    
-    newListInput.push(...Array.from(inputs).map(input => input.value));
-    console.log(newListInput); // taking input for current page and making array
+    console.log("adding");
+    const newItem = {
+        title: "",
+        location:"",
+        dates:"",
+        notes:"",
+        itinerary:"",
+        photo:[],
+        itinerary:""
+        };
 
-    // compiledData.push(newListInput); // pushes new array into list of data
-
-    // console.log(compiledData);
-    savingData(newListInput, title.value);
-
-    console.log("ADDED");
+    document.querySelectorAll('input').forEach((item) => {
+        newItem[item.id] = item.value;
+        console.log("hi");
+    })
+    savingData(newItem);    
 }
 
 //actually writing data to memory
-export const savingData = (data, title) => {
-    var data = JSON.stringify(data); //converts data to a String
-    localStorage.setItem(title, data); //saves data in localStorage
+export const savingData = (data) => { 
+    const db = retrievingData();
+    db.push(data);
+    localStorage.setItem("database", JSON.stringify(db));
 };
 
 export const retrievingData = () => {
-    var compiledArray = [];
-
-    for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-        const item = localStorage.getItem(localStorage.key(i));
-        const newItem = JSON.parse(item);
-        compiledArray+=newItem;
-        } // returning a string
-
-    console.log(compiledArray);
-    return compiledArray;
+   const dataBase = localStorage.getItem("database") || [];
+    return JSON.parse(database);
 };
 
-document.querySelector(".save-entry").addEventListener("click", addingData);
+if (document.querySelector(".save-entry")){
+        console.log("save");
+    document.querySelector(".save-entry").addEventListener("click", addingData);
+}

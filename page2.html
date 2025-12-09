@@ -12,8 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="./storage.js"></script>
-    <script type="module" src="./main2.js"></script>
+    <!-- <script type="module" src="./main2.js"></script> -->
     <title>Travel Log Entry</title>
   </head>
 
@@ -27,19 +26,19 @@
           <div class="banner-content">
             <input
               type="text"
-              id="titleInput"
+              id="title"
               class="title-input"
               placeholder="Trip Title"
             />
             <input
               type="text"
-              id="locationInput"
+              id="location"
               class="data-input"
               placeholder="Location Name"
             />
             <input
               type="text"
-              id="datesInput"
+              id="dates"
               class="data-input"
               placeholder="Dates of Trip"
             />
@@ -53,7 +52,7 @@
          <div class="note-wrapper box">
           <h2>Notes</h2>
           <textarea
-            id="notesInput"
+            id="notes"
             class="notes-textarea"
             placeholder="Write your notes..."
           ></textarea>
@@ -63,7 +62,7 @@
           <h2>Photo Gallery</h2>
           <input
             type="file"
-            id="photoInput"
+            id="photo"
             accept="image/*"
             multiple
             style="display: none"
@@ -89,7 +88,7 @@
       <div class="itinerary box">
         <h2>Itinerary</h2>
         <textarea
-          id="itineraryInput"
+          id="itinerary"
           class="data-input"
           placeholder="Type your itinerary..."
         ></textarea>        
@@ -119,4 +118,6 @@
         </div>
     </div>
   </body>
+      <script type="module" src="./storage.js"></script>
+
 </html>
