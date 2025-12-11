@@ -6,11 +6,13 @@ export class LogDisplay extends LitElement {
     super();
     this.title = "";
     this.date = "";
+    this.img= "main-photo.jpg";
   }
 
   static properties = {
     title: { type: String },
     date: { type: String },
+    img: { type: String }
   };
 
   static styles = css`
@@ -76,7 +78,7 @@ export class LogDisplay extends LitElement {
          <div class="log-display">
             <p class="log-title">${this.title}</p>
             <p class="log-date">${this.date}</p>
-            <img class="log-display-img" src="main-photo.jpg" alt="Main trip photo" />
+            <img class="log-display-img" src="${this.img}" alt="Main trip photo" />
             <button class="open-log" onclick="window.location='./page3.html';">></button>
         </div>
     </div>

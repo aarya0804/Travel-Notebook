@@ -9,8 +9,10 @@ document.querySelector(".save-entry-btn").addEventListener("click", openIndex);
 
 
 const submitImg = () =>{
-    console.log()
+    console.log("IMG");
 }
+document.querySelector(".add-banner-btn").addEventListener("click", submitImg);
+
 // testing map usage, trying to figure how to make a map appear with APIs
 // i searched this entire part up, especially the location coordinates part
 

@@ -152,6 +152,21 @@ button {
   gap: 6px;
 }
 
+.banners{
+  display: flex;
+}
+
+.banner-input{
+  float: left;
+  width: 70%;
+}
+
+.add-banner-btn{
+  float: right;
+  width: 30%;
+  border-right: transparent;
+}
+
 .trip-title {
   font-size: 1.8rem;
   font-weight: bold;
