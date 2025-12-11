@@ -1,33 +1,19 @@
 // We can worry about the JS towards the end
 import { retrievingData } from "./storage.js";
 
-// document.querySelector(".create-new").addEventListener("click", openPage2);
-// document.querySelector(".open-log").addEventListener("click", openPage3);
-
-// everytime the page loads, read LocalStorage and rerender log displays...
-
-
-// const openPage2 = () =>
-// {
-//     console.log("BUTTON");
-//     window.location.href= "./page2.html";
-// }
-
-
-// const openPage3 = () =>
-// {
-//     console.log("BUTTON");
-//     window.location.href= "./page3.html";
-// }
+// everytime the page loads, read LocalStorage and rerender log displays...=
 
 window.addEventListener("DOMContentLoaded", function(){
      //When dom loads, look through atabase and populatate logs
      const db = retrievingData();
      console.log("Hello");
+         let count = 0;
      db.forEach(element => {
-        var el = `<log-display title="${db[0].title}" date="${db[0].dates}"></log-display>`;
+      // how to access title of a specific object?
+        var el = `<log-display title="${db[count].title}" date="${db[count].dates}"></log-display>`;
         document.getElementById("log-wrapper").innerHTML += el;
         console.log("Hello!");
+        count++;
      });
 })
    

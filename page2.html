@@ -12,12 +12,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- <script type="module" src="./main2.js"></script> -->
+    <script type="module" src="./main2.js"></script>
     <title>Travel Log Entry</title>
   </head>
 
   <body>
-
    <!-- Adding an image banner and including the Title, Location, and Dates inside  -->
     <div class="Log">
         <div class="banner-container">
@@ -61,12 +60,11 @@
         <div class="photo-gallery box">
           <h2>Photo Gallery</h2>
           <input
-            type="file"
+            type="url"
             id="photo"
-            accept="image/*"
             multiple
-            style="display: none"
           />
+          <button>Submit Image</button>
           <div class="photos-box">
             <div class="photos" id="photoDisplay">
               <div><img src="photo1.jpg" alt="photo 1" /></div>

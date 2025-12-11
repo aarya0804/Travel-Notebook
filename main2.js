@@ -1,13 +1,16 @@
 
-// const openIndex = () =>
-// {
-//     console.log("BUTTON");
-//     window.location.href= "./index.html";
+const openIndex = () =>
+{
+    console.log("BUTTON");
+    window.location.href= "./index.html";
 
-// }
-// document.querySelector(".save-entry-btn").addEventListener("click", openIndex);
+}
+document.querySelector(".save-entry-btn").addEventListener("click", openIndex);
 
 
+const submitImg = () =>{
+    console.log()
+}
 // testing map usage, trying to figure how to make a map appear with APIs
 // i searched this entire part up, especially the location coordinates part
 
