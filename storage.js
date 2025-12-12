@@ -8,6 +8,7 @@ export const addingData = () =>
     const newItem = {
         title: "",
         location:"",
+        banner:"",
         dates:"",
         notes:"",
         itinerary:"",
