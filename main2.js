@@ -1,16 +1,12 @@
-
-const openIndex = () =>
-{
-    console.log("BUTTON");
-    window.location.href= "./index.html";
-
-}
+const openIndex = () => {
+  console.log("BUTTON");
+  window.location.href = "./index.html";
+};
 document.querySelector(".save-entry-btn").addEventListener("click", openIndex);
 
-
-const submitImg = () =>{
-    console.log("IMG");
-}
+const submitImg = () => {
+  console.log("IMG");
+};
 document.querySelector(".add-banner-btn").addEventListener("click", submitImg);
 
 // testing map usage, trying to figure how to make a map appear with APIs
@@ -36,29 +32,29 @@ document.querySelector(".add-banner-btn").addEventListener("click", submitImg);
 //   });
 // });
 
-// // Location lookup
-// const getLocBtn = document.querySelector("#getLocationBtn");
-// const locStatus = document.querySelector("#locationStatus");
-// const locDisplay = document.querySelector("#locationDisplay");
+// Location lookup
+const getLocBtn = document.querySelector("#getLocationBtn");
+const locStatus = document.querySelector("#locationStatus");
+const locDisplay = document.querySelector("#locationDisplay");
 
-// getLocBtn.addEventListener("click", () => {
-//   if (!navigator.geolocation) {
-//     locStatus.textContent = "Geolocation not supported";
-//     return;
-//   }
+getLocBtn.addEventListener("click", () => {
+  if (!navigator.geolocation) {
+    locStatus.textContent = "Geolocation not supported";
+    return;
+  }
 
-//   locStatus.textContent = "Requesting location...";
+  locStatus.textContent = "Requesting location...";
 
-//   navigator.geolocation.getCurrentPosition(
-//     (position) => {
-//       const lat = position.coords.latitude;
-//       const lng = position.coords.longitude;
-//       locStatus.textContent = "Location found";
-//       locDisplay.innerHTML =
-//         "Latitude: " + lat.toFixed(6) + "<br>Longitude: " + lng.toFixed(6);
-//     },
-//     () => {
-//       locStatus.textContent = "Unable to retrieve location";
-//     }
-//   );
-// });
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      locStatus.textContent = "Location found";
+      locDisplay.innerHTML =
+        "Latitude: " + lat.toFixed(6) + "<br>Longitude: " + lng.toFixed(6);
+    },
+    () => {
+      locStatus.textContent = "Unable to retrieve location";
+    }
+  );
+});
