@@ -1,8 +1,33 @@
 /* universal */
 .back-button {
-  background-color: #274c77;
-  color: white;
-  margin: 1em;
+  background-color: #bed2e9;
+  color: #274c77;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.back-button:hover{
+  background-color: rgb(51, 118, 173);
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  color: #bed2e9;
+}
+
+.submit-button{
+  background-color: rgb(51, 118, 173);
+  color: #bed2e9;
+  border-color: transparent;
+  padding: 0.5em;
+  border-radius: 100%;
+  transition: .3s;
+}
+
+.submit-button:hover{
+  background-color: #050827;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  color: #bed2e9;
 }
 
 /* For index.html (Home Page) */
@@ -11,7 +36,7 @@
 }
 
 body{
-    background-color: #040513;
+    background-color: #050827;
 }
 
 
@@ -102,32 +127,43 @@ button {
 .Log {
   gap: 0px 0px;
   border: #274c77;
-  border-width: 5px;
+  border-width: 5px 0 5px 5px;
   border-style: solid;
-  width: 80%;
+  width: 80vw;
   height: 85vh;
   margin: auto;
   margin-top: 5vh;
   min-width: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-color: #274C77 #bed2e9;
+  scrollbar-width: thin;
+  background-color: rgb(141, 181, 213);
+  border-radius: 1%;
+}
+input, textarea{
   background-color: #bed2e9;
+  border-radius: 1em;
+  border-color: transparent;
+  padding: 5px 5px 5px 20px;
+  color:#050827;
 }
 
-input{
+textarea{
+   width: 100%;
+  height: 10em;
+  border-radius: 20px;
+  border-color: transparent;
+  padding: 8px;
+  font-family: inherit;
   background-color: #bed2e9;
 }
 
 .banner-container {
-  background-image: url("./main-photo.jpg");
+  background-color: #274c77;
   margin-bottom: 20px;
   overflow: hidden;
   padding: 1em 0 1em 1em;
-  margin-bottom: 0;
-}
-
-h2, p, button{
-  background-color: #bed2e9;
 }
 
 .box {
@@ -135,7 +171,12 @@ h2, p, button{
   overflow-x: hidden;
   overflow-y: scroll;
   padding-right: 2em;
-  background-color: #bed2e9;
+}
+
+.section{
+  margin: 0 1em 2em 1em;  
+  padding: 10px;
+  overflow-y: hidden;
 }
 
 /* .edit-page-btn {
@@ -180,6 +221,8 @@ h2, p, button{
   flex-direction: column;
   background-color: transparent;
   gap: 6px;
+  margin-top: 2em;
+  padding-right: 1em;
 }
 
 
@@ -210,23 +253,25 @@ h2, p, button{
   display: block;
 }
 
-.notes-textarea,
-.itinerary-textarea {
-  width: 100%;
-  height: 100px;
-  border: 1px solid #000;
-  color: #000;
-  padding: 8px;
-  font-family: inherit;
-  background-color: #bed2e9;
+h2{
+  margin: 0.5em 0 0.5em 0.2em;
+  color: #274c77;
+}
+
+.photo-input{
+width: 70%;
+margin-left: 10%;
 }
 
 .photos-box {
   width: 100%;
   height: 240px;
-  border: 1px solid #000;
+  border-radius: 20px 0 0 20px;
+  margin-top: 1em;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-color: #274C77 #bed2e9;
+  scrollbar-width: thin;
   padding: 10px;
   background-color: #bed2e9;
 }
@@ -260,7 +305,7 @@ h2, p, button{
 .add-more-photos-btn {
   margin-top: 10px;
   background: none;
-  border: 1px solid #000;
+  border-color: transparent;
   padding: 6px 12px;
   cursor: pointer;
   color: #000;
@@ -279,6 +324,7 @@ h2, p, button{
   background: none;
   cursor: pointer;
   color: #000;
+   background-color: #bed2e9;
 }
 
 #map,
