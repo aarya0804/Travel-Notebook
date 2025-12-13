@@ -88,14 +88,6 @@
           <button class="submit-button"><i class="fa-solid fa-chevron-right"></i></button>
           <div class="photos-box" id="addPhotosBtn" class="add-photos-btn">
             <div class="photos" id="photoDisplay">
-              <div><img src="photo1.jpg" alt="photo 1" /></div>
-              <div><img src="photo2.jpg" alt="photo 2" /></div>
-              <div><img src="photo3.jpg" alt="photo 3" /></div>
-              <div><img src="photo4.jpg" alt="photo 4" /></div>
-              <div><img src="photo5.jpg" alt="photo 5" /></div>
-              <div><img src="photo6.jpg" alt="photo 6" /></div>
-              <div><img src="photo7.jpg" alt="photo 7" /></div>
-              <div><img src="photo8.jpg" alt="photo 8" /></div>
             </div>
           </div>
 <!-- 
@@ -113,7 +105,21 @@
         ></textarea>        
         <!-- <button id="shareItineraryBtn" class="share-itinerary-btn">
           Share Itinerary
-        </button> -->
+        </button>
+
+        <!-- NEW CODE START -->
+        <div class="checklist">
+          <h2>Checklist</h2>
+          <input
+            type="text"
+            id="checkItemInput"
+            class="data-input"
+            placeholder="Add an item (ex: Charger, Passport, Wallet)"
+          />
+          <button id="addCheckItemBtn">+ Add Item</button>
+          <div id="checklistItems"></div>
+        </div>
+        <!-- NEW CODE END -->
       </div>
 
       <!-- maps integration -->
@@ -127,8 +133,8 @@
           <div id="locationDisplay"></div>
         </div>
       </div>
+
       </div>
-    </div>
 
      <div class="save-entry">
        <button id="saveEntryBtn" class="save-entry-btn">
@@ -136,7 +142,6 @@
       </button>
      </div>
     </div>
-        </div>
     </div>
   </body>
       <script type="module" src="./storage.js"></script>
